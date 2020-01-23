@@ -4,9 +4,9 @@ using namespace std;
 
 
 /** WRITE DOWN YOUR INFORMATION HERE */
-string name = ""; // put your name here
-string ID = ""; // put your student id here
-int group_id = 0; // your Group Number here (1-8)
+string name = "Muh. Fachrul Hidayat"; // put your name here
+string ID = "1301194066"; // put your student id here
+int group_id = 3; // your Group Number here (1-8)
 
 
 /** FUNCTIONS LIST, DO NOT MODIFY THESE */
@@ -87,6 +87,16 @@ void insert_first(int arr[], int &n, int x) {
 
     // YOUR CODES HERE
     //-----------------------
+ int i;
+
+        if (n<20) {
+            for (i=n-1;i>=0;i--){
+                arr[i+1]=arr[i];
+            }
+            arr[0]=x;
+            n++;
+
+        };
 
 
     //-----------------------
@@ -182,7 +192,18 @@ void swap_data(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
+    int a=1;
+    int temp;
+    int batasTukar;
+    batasTukar = n/2;
+    for (int i =0;i<batasTukar;i++){
 
+       int temp = arr[i];
+        arr[i] = arr[n-a];
+        arr[n-a] =temp;
+        a++;
+
+    }
 
     //-----------------------
 }
@@ -197,10 +218,12 @@ void view_data_1(int arr[], int n) {
 
     // YOUR CODES HERE
     //-----------------------
-    for(int i=0; i<n; i++) {
-        cout<<arr[i]<<" ";
+ for(int i=0; i<n; i++) {
+        cout<<arr[i]<<", ";
+
     }
     cout<<endl;
+
     //-----------------------
 }
 
@@ -211,10 +234,15 @@ void view_data_2(int arr[], int n) {
     arr : input array
     n   : number of element inside array
     */
-
+    int k=n-1;
     // YOUR CODES HERE
     //-----------------------
+ for(int i=0; i<n; i++) {
+        cout<<arr[k]<<", ";
+        k--;
 
+    }
+    cout<<endl;
 
     //-----------------------
 }
